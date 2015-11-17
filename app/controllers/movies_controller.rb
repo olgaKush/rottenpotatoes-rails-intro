@@ -14,6 +14,7 @@ class MoviesController < ApplicationController
     if params[:sort].nil?
       @movies = Movie.all
     else
+      #working
       @movies = Movie.order("(#{params[:sort]}) ASC")
     end
   end
