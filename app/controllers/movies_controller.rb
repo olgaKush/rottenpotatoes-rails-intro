@@ -14,7 +14,7 @@ class MoviesController < ApplicationController
     if params[:sort].nil?
       @movies = Movie.all
     else
-      @movies = Movie.order("lower(#{params[:sort]}) ASC")
+      @movies = Movie.order("(#{params[:sort]}) ASC")
     end
   end
 
